@@ -137,24 +137,25 @@ export default function App() {
       </View>
  
       <View style={styles.view_linha}>
-        <TouchableOpacity style={styles.botao_num}
-          onPress={() => addNumeroAoVisor('()')}>
-          <Text style={styles.texto_botao}>()</Text>
-        </TouchableOpacity>
- 
-        <TouchableOpacity style={styles.botao_num}
+      <TouchableOpacity style={styles.botao_num}
           onPress={() => configOperacao('%')}>
           <Text style={styles.texto_botao}>%</Text>
         </TouchableOpacity>
+    
+        <TouchableOpacity style={styles.botao_num}
+          onPress={() => addNumeroAoVisor('')}>
+          <Text style={styles.texto_botao}></Text>
+        </TouchableOpacity>
+ 
  
         <TouchableOpacity style={styles.botao_num}
-          onPress={() => configOperacao(',')}>
-          <Text style={styles.texto_botao}>,</Text>
+          onPress={() => configOperacao('')}>
+          <Text style={styles.texto_botao}></Text>
         </TouchableOpacity>
  
         <TouchableOpacity style={styles.botao_num}
           onPress={() => executarOperacao()}>
-          <Text style={styles.texto_botao}>=</Text>
+          <Text style={styles.texto_botao}></Text>
         </TouchableOpacity>
       </View>
  
@@ -166,7 +167,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#8A0303',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -176,6 +177,7 @@ const styles = StyleSheet.create({
     width: '95%',
     height: '15%',
     fontSize: 30,
+    backgroundColor: '#fff',
     borderRadius: 10,
   },
  
@@ -192,6 +194,7 @@ const styles = StyleSheet.create({
     height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#A9A9A9',
     borderRadius: 10,
   },
  
